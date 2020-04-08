@@ -1,0 +1,38 @@
+<!-- Exercise - Keyup
+1. Create a text input field. Listen for the keyup event. Alert the value of the text box
+whenever keyup occurs.
+2. Get the value of an input field using: $('input').val();
+3. For bonus points, append the value of the text box into a div. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <p>Enter the name : </p>
+
+    <input type="text" id="text" >
+    <p>Alert the value when keyUp occurs</p>
+
+</div>   
+      <!-- jquery Library -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("input").on("keyup",function(){
+               alert($("input").val());
+            });
+
+        });
+        
+
+ $('div')=$('div').append('<p>'+' $('input').val()'+'</p>');
+    </script>
+
+    </body>
+</html>

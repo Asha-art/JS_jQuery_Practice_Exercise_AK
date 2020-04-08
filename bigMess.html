@@ -1,0 +1,35 @@
+<!-- Exercise - A big mess
+You can generate a random integer between 0 and 500 using the following code:
+Math.random() * 500
+You can generate a jQuery object that contains everything on the page inside the body
+element like so:
+$('body *');
+1. Write a jQuery function that iterates over everything on the page using each,
+makes them all position:absolute, and assigns random top and left values. You
+need to use each here to give them all different random values. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Random integer between 0 and 500</p>
+
+    <p id="integer"></p>
+
+    <!-- jquery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+//         function getRandomInt(min,max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+        function getRandomInt(){
+            return Math.random()*500;
+                
+        }
+    </script>
+  
+</body>
+</html>

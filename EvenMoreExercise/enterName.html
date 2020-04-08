@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Enter your name</p>
+    <input type="text" id="enterName"></input>
+    <button> Enter</button>
+    <p id="greet"></p>
+
+    <!-- jquery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        var name = $("#enterName").val();
+   
+   console.log("It's great to see you, " + name);
+  
+
+    });
+   
+</script>
+</body>
+</html>

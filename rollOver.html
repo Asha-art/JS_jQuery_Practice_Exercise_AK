@@ -1,0 +1,41 @@
+<!-- Exercise - Rollover
+1. Review the list of events on: http://api.jquery.com/category/events/
+2. Create code that listens for a hover event. When the user rolls over a div, place
+the word "over" in that div.
+3. When the user mouses out of the div, place the word "out" in the div. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+   <p> place the word "over" when mouse enters the div</p>
+   <p>"out" when mouse is out of the div</p>
+
+</div>
+
+
+    <!-- jquery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        //you can use any below two
+        //  $( selector ).hover( handlerIn, handlerOut )
+        // $( selector ).mouseenter( handlerIn ).mouseleave( handlerOut );
+
+        $("div").hover(
+            function(){
+                    $(this).append("<p>over</p>");
+            },
+            function(){
+                    $(this).append("<p>out</p>");
+            }
+        );
+
+    </script>
+</body>
+</html>
