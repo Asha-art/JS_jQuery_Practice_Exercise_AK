@@ -1,3 +1,9 @@
+<!-- Exercise - Append
+1. Use jQuery to select the body element
+2. Use the .append() function to append a new hyperlink.
+3. Use the .attr() function to set an href attribute on the hyperlink. Open it in your
+DOM and check it's clickable. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +14,23 @@
 <body>
 
  <h2>Append a new hyperlink and set attribute on the hyperlink</h2>
-        <p>Append a new hyperlink</p>
-       <a href = "https://www.w3schools.com/jquery/html_append.asp"></a>
         
+            <p>Append a new hyperlink</p>       
         
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(function(){
+                // add hyperlink
+            $('body').append("<a> link</a>");
+            // add href attribute to new link
+            $("a").attr("href","https://en.wikipedia.org/wiki/Main_Page");
         
-        $('body').on('click', function(){
-		$('body').append('<a href= "https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>');
-	        });
+        // $('body').on('click', function(){
+		// $('body').append('<a href= "https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>');    
+        //  });
         });
- 
+        
 
     </script>
 </body>

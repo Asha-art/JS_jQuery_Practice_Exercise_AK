@@ -1,3 +1,5 @@
+<!-- Write a program that asks the user for their name and greets them with their
+name. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +18,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
     $(document).ready(function(){
-
-        var name = $("#enterName").val();
-   
-   console.log("It's great to see you, " + name);
-  
+           
+   $('button').on('click',function(){
+        var name = $("#enterName").val();  
+        var greeting = "It's great to see you, "+name+"<br/>  "; 
+       $("#greet").append(greeting);
+       console.log("It's great to see you, " + name);   
+       $("input:text").val("");
+        });
 
     });
    

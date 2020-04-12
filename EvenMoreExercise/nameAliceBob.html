@@ -1,0 +1,47 @@
+<!-- Write a program that asks the user for their name and greets them with their
+name.
+Modify the above program such that only the users Alice and Bob are greeted
+with their names.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Enter your name</p>
+    <input type="text" id="enterName"></input>
+    <button> Enter</button>
+    <p id="greet"></p>
+
+    <!-- jquery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+           
+   $('button').on('click',function(){
+       
+       var name = $("#enterName").val();  
+                    
+         if(name == "Alice" || name == "Bob"){
+            console.log("It's great to see you, " + name); 
+               var greeting = "It's great to see you, "+name+"<br/>  "; 
+                $("#greet").append(greeting);
+                console.log("It's great to see you, " + name);              
+            }else{            
+                $("#greet").append("Hi, Welcome!<br/>");
+                console.log("Hi, Welcome! ");  
+            }
+              
+            $("input:text").val("");
+               return;
+        });
+      
+     });
+   
+</script>
+</body>
+</html>

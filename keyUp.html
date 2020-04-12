@@ -23,6 +23,7 @@ whenever keyup occurs.
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script>
+        var value =  $('input').val();
         $(document).ready(function(){
             $("input").on("keyup",function(){
                alert($("input").val());
@@ -31,7 +32,7 @@ whenever keyup occurs.
         });
         
 
- $('div')=$('div').append('<p>'+' $('input').val()'+'</p>');
+ $('div').append(value);
     </script>
 
     </body>

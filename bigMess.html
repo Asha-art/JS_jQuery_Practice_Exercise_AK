@@ -15,7 +15,17 @@ need to use each here to give them all different random values. -->
     <title>Document</title>
 </head>
 <body>
-    <p>Random integer between 0 and 500</p>
+
+  <h2>Harry Potter</h2>
+
+   
+    <ul>
+        <li>Gryffindor</li>
+        <li>Slytherin</li>
+        <li>Hufflepuff</li>
+        <li>Ravenclaw</li>
+        </ul>
+    </ul>
 
     <p id="integer"></p>
 
@@ -25,10 +35,27 @@ need to use each here to give them all different random values. -->
 //         function getRandomInt(min,max) {
 //   return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
-        function getRandomInt(){
-            return Math.random()*500;
-                
-        }
+       
+    $(document).ready(function () {
+      
+      let randomValue = function () {
+              return Math.random() * 500;
+            }
+
+      let body = $("body *")
+      body.each(function () {
+       
+          $(this).css({
+
+            "position": "absolute",
+            "top": randomValue(),
+            "left": randomValue()
+
+        })
+      })
+    });
+
+        
     </script>
   
 </body>
