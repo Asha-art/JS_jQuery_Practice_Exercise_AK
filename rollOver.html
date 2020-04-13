@@ -9,14 +9,12 @@ the word "over" in that div.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ROll Over</title>
 </head>
 <body>
-<div>
-   <p> place the word "over" when mouse enters the div</p>
-   <p>"out" when mouse is out of the div</p>
 
-</div>
+  
+<div style="background-color:#7d8bca;border:rgb(240, 115, 25) solid 2px;width:200px;height:100px;padding:40px;color: white;font-size: 30px;"></div>
 
 
     <!-- jquery Library -->
@@ -26,15 +24,15 @@ the word "over" in that div.
         //you can use any below two
         //  $( selector ).hover( handlerIn, handlerOut )
         // $( selector ).mouseenter( handlerIn ).mouseleave( handlerOut );
-
+        $(document).ready(function(){
         $("div").hover(
             function(){
-                    $(this).append("over");
+                    $(this).text("Over");
             },
             function(){
-                    $(this).append("out");
-            }
-        );
+                    $(this).text("Out");
+            });
+        });
 
     </script>
 </body>
